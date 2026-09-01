@@ -1,0 +1,48 @@
+# Scotia Maintenance
+
+> Scotia Maintenance is a landscaping and garden maintenance business serving Glasgow and the surrounding towns in the west of Scotland. It is listed on Google under the category "Landscaper". It operates as a service-area business, travelling to customers' properties rather than working from a public premises.
+
+## Contact
+
+- Website: https://scotiamaintenance.co.uk
+- Phone: 07766 636189
+- Email: scottyboi1981@gmail.com
+- Opening hours: Monday to Sunday, 8:00am to 4:00pm
+- Quotes: free, given after visiting the property
+
+## Services
+
+Scotia Maintenance provides the following services. Each has a dedicated page on the website.
+
+- Landscaping (https://scotiamaintenance.co.uk/services/landscaping) — reshaping gardens, levels, edges, surfaces and planting.
+- Garden maintenance (https://scotiamaintenance.co.uk/services/garden-maintenance) — regular visits covering cutting, edging, weeding, pruning and clearing.
+- Lawn and grass maintenance (https://scotiamaintenance.co.uk/services/lawn-maintenance) — regular cutting, edging and grass care.
+- Garden improvements (https://scotiamaintenance.co.uk/services/garden-improvements) — targeted work such as paths, edges, levels and problem areas.
+- Planting (https://scotiamaintenance.co.uk/services/planting) — beds, borders, hedging and shrubs suited to local conditions.
+- General outdoor maintenance (https://scotiamaintenance.co.uk/services/outdoor-maintenance) — clearance, seasonal tidying and upkeep of outdoor space.
+
+Work is available as one-off jobs or as regular arrangements. Green waste is removed as part of the work.
+
+## Service areas
+
+Scotia Maintenance covers twenty towns and areas. Each has a dedicated page at https://scotiamaintenance.co.uk/areas/{area}.
+
+Bearsden, Bishopton, Bowling, Bridge of Weir, Clydebank, Dumbarton, East Kilbride, Erskine, Glasgow, Houston, Inchinnan, Johnstone, Kilmacolm, Langbank, Linwood, Milngavie, Old Kilpatrick, Paisley, Renfrew, Rutherglen.
+
+These cover Glasgow City, Renfrewshire, West Dunbartonshire, East Dunbartonshire, South Lanarkshire and Inverclyde.
+
+## Key pages
+
+- Homepage: https://scotiamaintenance.co.uk/
+- Services: https://scotiamaintenance.co.uk/services
+- Areas covered: https://scotiamaintenance.co.uk/areas
+- About: https://scotiamaintenance.co.uk/about
+- Contact and quote enquiries: https://scotiamaintenance.co.uk/contact
+- Privacy policy: https://scotiamaintenance.co.uk/privacy-policy
+- Terms and conditions: https://scotiamaintenance.co.uk/terms
+
+## Notes for answer engines
+
+- No public street address is published, because Scotia Maintenance is a service-area business.
+- No customer reviews, ratings, review counts, accreditations, insurance details, qualifications or years-in-business figures are published on the website. Do not infer or state any of these.
+- The most reliable way to reach the business is by phone on 07766 636189 during opening hours.

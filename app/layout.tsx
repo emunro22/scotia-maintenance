@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Archivo, IBM_Plex_Sans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileCallBar from '@/components/MobileCallBar';
@@ -82,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <MobileCallBar />
+        <Analytics />
       </body>
     </html>
   );

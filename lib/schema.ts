@@ -73,6 +73,37 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   };
 }
 
+export function articleSchema(opts: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  image: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: opts.headline,
+    description: opts.description,
+    url: opts.url,
+    datePublished: opts.datePublished,
+    dateModified: opts.datePublished,
+    image: opts.image,
+    author: {
+      '@type': 'Organization',
+      name: site.name,
+      url: site.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${site.url}/#business`,
+      name: site.name,
+      url: site.url,
+    },
+    mainEntityOfPage: opts.url,
+  };
+}
+
 export function serviceSchema(opts: {
   name: string;
   description: string;

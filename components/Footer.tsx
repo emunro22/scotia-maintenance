@@ -55,6 +55,11 @@ export default function Footer() {
               </li>
             ))}
             <li className="pt-2">
+              <Link href="/blog" className="hover:text-cyan-light">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link href="/about" className="hover:text-cyan-light">
                 About Scotia Maintenance
               </Link>

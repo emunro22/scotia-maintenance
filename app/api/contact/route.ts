@@ -85,7 +85,7 @@ export async function POST(request: Request) {
   const from = process.env.CONTACT_FROM_EMAIL || 'Scotia Maintenance <onboarding@resend.dev>';
 
   if (!apiKey) {
-    console.error('RESEND_API_KEY is not set — enquiry was not sent.');
+    console.error('RESEND_API_KEY is not set; enquiry was not sent.');
     return NextResponse.json(
       { error: 'Enquiries are temporarily unavailable. Please call 07766 636189.' },
       { status: 503 },
@@ -95,7 +95,7 @@ export async function POST(request: Request) {
   const resend = new Resend(apiKey);
 
   const text = [
-    `New website enquiry — ${source}`,
+    `New website enquiry: ${source}`,
     '',
     `Name:    ${name}`,
     `Phone:   ${phone}`,

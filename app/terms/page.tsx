@@ -59,8 +59,8 @@ export default function TermsPage() {
           </p>
           <p>
             A quote covers the work described in it. If additional work is identified once the
-            job is underway — for example buried debris, unstable retaining structures, drainage
-            problems or ground conditions that were not visible beforehand — this will be raised
+            job is underway (for example buried debris, unstable retaining structures, drainage
+            problems or ground conditions that were not visible beforehand), this will be raised
             with you and priced separately before it is carried out.
           </p>
           <p>
@@ -72,7 +72,7 @@ export default function TermsPage() {
             Work is scheduled by agreement. Scotia Maintenance works Monday to Sunday between
             8:00am and 4:00pm. Garden work depends heavily on weather and ground conditions, and
             visits may need to be rescheduled where conditions would make the work unsafe or
-            would damage the garden — for example cutting a saturated lawn, or working at height
+            would damage the garden, for example cutting a saturated lawn, or working at height
             in high wind. Where a visit is rescheduled, you will be told as soon as reasonably
             possible and an alternative arranged.
           </p>
@@ -158,8 +158,8 @@ export default function TermsPage() {
           <h2 className="mt-12 text-2xl">9. Standard of work and problems</h2>
           <p className="mt-4">
             Work is carried out with reasonable care and skill. If you are not satisfied with
-            something, please raise it as soon as possible — ideally within 14 days of the work
-            being completed — so it can be looked at and put right where appropriate. Nothing in
+            something, please raise it as soon as possible, ideally within 14 days of the work
+            being completed, so it can be looked at and put right where appropriate. Nothing in
             these terms affects your statutory rights as a consumer under the Consumer Rights Act
             2015.
           </p>

@@ -31,7 +31,7 @@ export const openingHoursSpecification = [
   },
 ];
 
-/** Canonical URL helper — always returns a clean, absolute, lowercase URL. */
+/** Canonical URL helper: always returns a clean, absolute, lowercase URL. */
 export function canonical(path = '/'): string {
   const clean = path === '/' ? '' : `/${path.replace(/^\/+|\/+$/g, '')}`;
   return `${site.url}${clean}`;

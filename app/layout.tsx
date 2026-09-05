@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Landscaping Glasgow & West Scotland | Scotia Maintenance',
     description:
       'Landscaping and garden maintenance across Glasgow, Renfrewshire and Dunbartonshire. Seven days a week, 8am to 4pm.',
-    images: [{ url: site.ogImage, width: 1200, height: 630, alt: 'Scotia Maintenance — landscaping and garden maintenance' }],
+    images: [{ url: site.ogImage, width: 1200, height: 630, alt: 'Scotia Maintenance: landscaping and garden maintenance' }],
   },
   twitter: {
     card: 'summary_large_image',

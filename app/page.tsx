@@ -116,7 +116,7 @@ export default function HomePage() {
             <p className="mt-6 max-w-xl text-[1.15rem] leading-relaxed text-white/80">
               Scotia Maintenance is a local landscaper covering Glasgow, Renfrewshire,
               Dunbartonshire and the towns in between. Garden maintenance, landscaping,
-              lawns, planting and outdoor work — seven days a week, 8am to 4pm.
+              lawns, planting and outdoor work, seven days a week, 8am to 4pm.
             </p>
           </Reveal>
 
@@ -316,7 +316,7 @@ export default function HomePage() {
 
       <CoverageBand />
 
-      {/* Reviews — placeholder structure, no fabricated reviews */}
+      {/* Reviews: placeholder structure, no fabricated reviews */}
       <section className="py-16 sm:py-20">
         <div className="container-page">
           <Reveal>
@@ -326,7 +326,7 @@ export default function HomePage() {
               <p className="copy mt-4">
                 Scotia Maintenance is listed on Google as a landscaper covering Glasgow and the
                 surrounding towns. Verified customer reviews will be published here as they are
-                collected — nothing is shown until it is genuine.
+                collected, and nothing is shown until it is genuine.
               </p>
             </div>
           </Reveal>

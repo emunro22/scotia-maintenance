@@ -7,7 +7,7 @@ type Props = {
   children: ReactNode;
   delay?: number;
   className?: string;
-  /** Element to render as — 'li' keeps list markup valid when revealing grid/list items. */
+  /** Element to render as: 'li' keeps list markup valid when revealing grid/list items. */
   as?: 'div' | 'li';
 };
 

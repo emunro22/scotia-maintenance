@@ -70,7 +70,7 @@ export default function ContactForm({ source, placeholder }: Props) {
       router.push('/thank-you');
     } catch {
       setErrors({
-        form: 'The enquiry could not be sent — check your connection, or call 07766 636189.',
+        form: 'The enquiry could not be sent. Check your connection, or call 07766 636189.',
       });
       setSubmitting(false);
     }
@@ -83,7 +83,7 @@ export default function ContactForm({ source, placeholder }: Props) {
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       <input type="hidden" name="source" value={source} />
 
-      {/* Honeypot — hidden from people, tempting to bots. */}
+      {/* Honeypot: hidden from people, tempting to bots. */}
       <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
         <label htmlFor="company">Company</label>
         <input id="company" name="company" type="text" tabIndex={-1} autoComplete="off" />
@@ -172,7 +172,7 @@ export default function ContactForm({ source, placeholder }: Props) {
           className={fieldClass}
           placeholder={
             placeholder ||
-            'A short description of the garden and the work — size, condition and where you are.'
+            'A short description of the garden and the work: size, condition and where you are.'
           }
         />
       </div>
@@ -183,7 +183,7 @@ export default function ContactForm({ source, placeholder }: Props) {
 
       <p className="text-sm text-ink/60">
         Enquiries go straight to Scotia Maintenance. Details are used to reply to you and are
-        never sold or shared — see the{' '}
+        never sold or shared, see the{' '}
         <a href="/privacy-policy" className="text-blue-brand underline underline-offset-4">
           privacy policy
         </a>

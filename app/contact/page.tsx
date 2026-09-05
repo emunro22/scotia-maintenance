@@ -65,8 +65,8 @@ export default function ContactPage() {
               The more detail in the message, the more useful the first reply will be. It helps
               to know roughly how big the garden is, what condition it is currently in, and
               whether you are after a one-off job or regular visits through the season. If
-              something specific has gone wrong — a lawn that stays waterlogged, a hedge that has
-              got out of hand, a slope that has become difficult to manage — mention it, because
+              something specific has gone wrong (a lawn that stays waterlogged, a hedge that has
+              got out of hand, a slope that has become difficult to manage), mention it, because
               those problems often decide what the right approach is.
             </p>
             <p className="copy mt-4 max-w-prose">

@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <p>
             If you call or email instead, Scotia Maintenance holds whatever details you provide
-            in that conversation — typically your name, contact number and the address of the
+            in that conversation, typically your name, contact number and the address of the
             property the work relates to.
           </p>
           <p>
@@ -79,9 +79,9 @@ export default function PrivacyPolicyPage() {
           <h2 className="mt-12 text-2xl">Why it is used, and the lawful basis</h2>
           <p className="mt-4">
             Enquiry details are used to respond to you, arrange a visit, provide a quote and
-            carry out any work you go on to book. The lawful basis is legitimate interests —
-            responding to a request you have made — and, once work is agreed, performance of a
-            contract with you.
+            carry out any work you go on to book. The lawful basis is legitimate interests,
+            namely responding to a request you have made, and, once work is agreed, performance
+            of a contract with you.
           </p>
           <p>
             Records relating to completed work may also be kept where necessary to comply with
@@ -99,20 +99,20 @@ export default function PrivacyPolicyPage() {
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-6">
             <li>
-              <strong>Resend</strong> — delivers enquiry form submissions to the Scotia
+              <strong>Resend</strong>: delivers enquiry form submissions to the Scotia
               Maintenance email inbox.
             </li>
             <li>
-              <strong>Vercel</strong> — hosts this website and processes standard server request
+              <strong>Vercel</strong>: hosts this website and processes standard server request
               information such as IP addresses for security and reliability purposes.
             </li>
             <li>
-              <strong>Google</strong> — the maps shown on area pages are embedded from Google
+              <strong>Google</strong>: the maps shown on area pages are embedded from Google
               Maps, so loading those pages involves a connection to Google&rsquo;s servers, which
               is subject to Google&rsquo;s own privacy policy.
             </li>
             <li>
-              <strong>Email provider</strong> — enquiries are received and stored in a standard
+              <strong>Email provider</strong>: enquiries are received and stored in a standard
               email inbox.
             </li>
           </ul>

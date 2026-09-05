@@ -23,7 +23,7 @@ export const services: Service[] = [
     name: 'Landscaping',
     navLabel: 'Landscaping',
     shortDescription:
-      'Reshaping tired outdoor space into something usable — levels, edges, surfaces and planting worked out on site.',
+      'Reshaping tired outdoor space into something usable: levels, edges, surfaces and planting worked out on site.',
     metaTitle: 'Landscaping Glasgow & Renfrewshire | Scotia Maintenance',
     metaDescription:
       'Landscaping across Glasgow, Paisley, Renfrew and surrounding towns. Reshaping gardens, levels, edges and planting. Call Scotia Maintenance on 07766 636189.',
@@ -33,7 +33,7 @@ export const services: Service[] = [
     intro:
       'Landscaping is the work of changing the shape of a garden rather than simply tidying it. Scotia Maintenance takes on landscaping projects across Glasgow and the surrounding towns, from a single awkward corner through to a full rear garden that has never really worked for the people living with it.',
     body: [
-      'Most gardens in this part of Scotland were laid out for a different life than the one being lived in them now. A long, narrow strip behind a terrace, a sloping back green that drops away from the house, a lawn that has crept over its edges until the shape has been lost entirely — these are the situations landscaping is for. The starting point is always a visit. Levels, drainage, access and what the ground is actually made of matter far more than any drawing, and none of them can be judged from a photograph.',
+      'Most gardens in this part of Scotland were laid out for a different life than the one being lived in them now. A long, narrow strip behind a terrace, a sloping back green that drops away from the house, a lawn that has crept over its edges until the shape has been lost entirely: these are the situations landscaping is for. The starting point is always a visit. Levels, drainage, access and what the ground is actually made of matter far more than any drawing, and none of them can be judged from a photograph.',
       'A landscaping project might involve stripping out overgrown or failed planting, cutting in new lawn shapes and edges, reworking levels so a slope becomes usable, laying paths and hard surfaces where they are needed, and replanting borders so the garden holds together through the year. The scale is set by the garden and the budget rather than by a fixed package. Some jobs are a day of clearance and reshaping. Others are staged over several visits so the work spreads out sensibly.',
       'The west of Scotland puts particular demands on a landscaped garden. Rainfall is high, many gardens sit on heavy clay that holds water through winter, and exposed plots near the Clyde take a constant salt-laden wind. Work that ignores those conditions tends to look fine for a season and then fail. Falls are set so water runs away from the house, edges are put in so they hold rather than collapse into the beds after the first wet spell, and planting is chosen to cope with a Scottish winter rather than a catalogue photograph.',
       'Quotes are given after seeing the garden, with the work described plainly so it is clear what is included. If a garden needs staging across a few visits, that is said upfront rather than discovered halfway through.',
@@ -91,7 +91,7 @@ export const services: Service[] = [
     name: 'Garden maintenance',
     navLabel: 'Garden maintenance',
     shortDescription:
-      'Regular visits that keep a garden under control — cutting, edging, weeding, pruning and clearing, on a rhythm that suits the space.',
+      'Regular visits that keep a garden under control: cutting, edging, weeding, pruning and clearing, on a rhythm that suits the space.',
     metaTitle: 'Garden Maintenance Glasgow & Paisley | Scotia Maintenance',
     metaDescription:
       'Regular garden maintenance across Glasgow, Paisley, Renfrew and nearby towns. Cutting, edging, weeding, pruning and clearing. Call 07766 636189.',
@@ -104,7 +104,7 @@ export const services: Service[] = [
       'A garden in the west of Scotland grows hard from April to October. Grass in a wet spring can put on enough growth in ten days to make a mower struggle, hedges thicken quickly, and beds that were clear in May are full by July. Left alone for a season, a manageable garden turns into a clearance job. Regular maintenance is simply the cheaper and less disruptive version of the same work.',
       'A typical visit covers cutting the grass, tidying the edges where lawn meets path or border, weeding beds, cutting back growth that is spilling over paths or windows, and clearing arisings so nothing is left sitting in a pile. Hedges are trimmed at the right point in the season. In autumn the emphasis moves to leaf clearance, cutting back and getting the garden into a state where winter does not do damage. In winter, visits become less frequent but still useful for gutters lines, overhanging growth and general tidying.',
       'Frequency depends on the garden. A small enclosed plot might need a visit every three or four weeks through the growing season. A larger garden with hedges, mature trees and long borders often needs fortnightly attention from spring through autumn. Some customers want a single tidy-up before a family event, a property viewing or the end of a tenancy, and that is equally straightforward to arrange.',
-      'The service also suits people who like their garden but no longer want to do the heavy or repetitive parts of it — the hedge that needs a ladder, the grass that has become too much, the corner that gets away every year. Maintenance can be arranged around exactly those tasks rather than taking the whole garden off your hands.',
+      'The service also suits people who like their garden but no longer want to do the heavy or repetitive parts of it: the hedge that needs a ladder, the grass that has become too much, the corner that gets away every year. Maintenance can be arranged around exactly those tasks rather than taking the whole garden off your hands.',
     ],
     benefits: [
       {
@@ -113,7 +113,7 @@ export const services: Service[] = [
       },
       {
         title: 'Frequency set by the garden',
-        text: 'Weekly, fortnightly, monthly or seasonal — chosen around how fast your space actually grows.',
+        text: 'Weekly, fortnightly, monthly or seasonal: chosen around how fast your space actually grows.',
       },
       {
         title: 'Everything cleared away',
@@ -169,8 +169,8 @@ export const services: Service[] = [
       'Grass is the single biggest job in most Scottish gardens. Scotia Maintenance provides lawn and grass maintenance across Glasgow and the surrounding towns, covering regular cutting, edging and the wider care that keeps a lawn even and usable rather than patchy and waterlogged.',
     body: [
       'The growing season here is long and wet. Grass often starts moving in March and is still growing into November, and a fortnight of mild rain in June can put on more growth than a domestic mower is comfortable with. Cutting on a consistent rhythm keeps the sward dense and even. Cutting only when the grass has already got long tends to leave a yellowed, uneven finish and encourages moss and weeds to take the gaps.',
-      'A lawn visit covers cutting at a height appropriate to the season, cutting in the edges where the lawn meets beds, paths and fences, and clearing the clippings. Edges make more difference to how a lawn looks than almost anything else — a straightforward cut with a clean edge reads as a well-kept garden, while a good cut with ragged edges does not.',
-      'Beyond cutting, common grass problems in this area are moss, compaction and poor drainage. Shaded gardens under mature trees in places like Bearsden and Milngavie hold moss badly. Flat, low-lying gardens on heavy ground in Renfrew, Inchinnan and Linwood can sit wet for weeks. New-build lawns, particularly turf laid over thin topsoil on estates like Dargavel in Bishopton, often struggle in their first few years. These issues are assessed on site and dealt with practically — improving what is there where that is realistic, and being honest where a lawn would be better reshaped or replaced.',
+      'A lawn visit covers cutting at a height appropriate to the season, cutting in the edges where the lawn meets beds, paths and fences, and clearing the clippings. Edges make more difference to how a lawn looks than almost anything else: a straightforward cut with a clean edge reads as a well-kept garden, while a good cut with ragged edges does not.',
+      'Beyond cutting, common grass problems in this area are moss, compaction and poor drainage. Shaded gardens under mature trees in places like Bearsden and Milngavie hold moss badly. Flat, low-lying gardens on heavy ground in Renfrew, Inchinnan and Linwood can sit wet for weeks. New-build lawns, particularly turf laid over thin topsoil on estates like Dargavel in Bishopton, often struggle in their first few years. These issues are assessed on site and dealt with practically, improving what is there where that is realistic, and being honest where a lawn would be better reshaped or replaced.',
       'Grass cutting is also available as a standalone arrangement for people who manage the rest of the garden themselves and simply want the mowing taken care of through the season.',
     ],
     benefits: [
@@ -180,7 +180,7 @@ export const services: Service[] = [
       },
       {
         title: 'Edges cut in every visit',
-        text: 'Clean lines where the lawn meets beds, paths and fences — the detail that makes a garden look kept.',
+        text: 'Clean lines where the lawn meets beds, paths and fences: the detail that makes a garden look kept.',
       },
       {
         title: 'Practical answers to moss and wet ground',
@@ -226,7 +226,7 @@ export const services: Service[] = [
     name: 'Garden improvements',
     navLabel: 'Garden improvements',
     shortDescription:
-      'Targeted changes that fix the one thing not working — a failing edge, a muddy route, a dead corner, an awkward level.',
+      'Targeted changes that fix the one thing not working: a failing edge, a muddy route, a dead corner, an awkward level.',
     metaTitle: 'Garden Improvements Glasgow Area | Scotia Maintenance',
     metaDescription:
       'Garden improvement work across Glasgow and surrounding towns. Paths, edges, levels, beds and problem corners fixed. Call Scotia Maintenance on 07766 636189.',
@@ -234,7 +234,7 @@ export const services: Service[] = [
     imageAlt:
       'Improved rear garden with a new sandstone patio leading to a repainted garden shed',
     intro:
-      'Not every garden needs redesigning. Often one thing is wrong — a route that turns to mud every winter, a bed that has lost its shape, a corner nothing will grow in, a step that has become unsafe. Scotia Maintenance takes on garden improvement work of exactly that kind across Glasgow and the surrounding areas.',
+      'Not every garden needs redesigning. Often one thing is wrong: a route that turns to mud every winter, a bed that has lost its shape, a corner nothing will grow in, a step that has become unsafe. Scotia Maintenance takes on garden improvement work of exactly that kind across Glasgow and the surrounding areas.',
     body: [
       'Improvement work sits between maintenance and full landscaping. It is for the jobs that regular visits will never solve because the underlying arrangement is the problem, but which do not justify starting the whole garden again. Common examples include putting in a path across a worn line of grass, re-cutting and edging beds that have blurred into the lawn, levelling a dip that collects water, replacing a rotten or collapsing edge, opening up an overgrown boundary, or clearing and replanting a section that has been given up on.',
       'These jobs tend to have a disproportionate effect. A garden can look neglected because of one failed element while everything around it is perfectly sound. Fixing the route from the back door to the shed, or reinstating a proper edge along a long border, often changes how the whole space reads and how much it gets used.',
@@ -269,7 +269,7 @@ export const services: Service[] = [
       {
         question: 'What counts as a garden improvement?',
         answer:
-          'Any targeted change that fixes something not working — a new path, re-cut edges, a levelled dip, a replaced border edge, a cleared and replanted corner. It is smaller in scope than full landscaping but goes beyond routine maintenance.',
+          'Any targeted change that fixes something not working, such as a new path, re-cut edges, a levelled dip, a replaced border edge, or a cleared and replanted corner. It is smaller in scope than full landscaping but goes beyond routine maintenance.',
       },
       {
         question: 'Can improvements be done alongside regular maintenance?',
@@ -301,12 +301,12 @@ export const services: Service[] = [
     image: '/images/rear-garden-after-10.jpg',
     imageAlt: 'Raised planting bed with a potted hydrangea in a newly landscaped garden',
     intro:
-      'Planting is what stops a landscaped garden looking bare and gives a maintained one some structure. Scotia Maintenance carries out planting work across Glasgow and the surrounding towns — new beds and borders, hedging, shrubs and replacement planting where things have failed.',
+      'Planting is what stops a landscaped garden looking bare and gives a maintained one some structure. Scotia Maintenance carries out planting work across Glasgow and the surrounding towns: new beds and borders, hedging, shrubs and replacement planting where things have failed.',
     body: [
       'The decisions that matter in planting are made before anything goes in the ground. Exposure, soil, light and drainage vary enormously across this area, and often across a single garden. A sheltered south-facing back garden in the Southside of Glasgow supports plants that would be shredded within a season on an exposed riverside plot at Langbank or Erskine. Ground under mature beech in Bearsden is dry and shaded in a way that catalogue planting schemes rarely account for. Heavy clay in low-lying parts of Renfrewshire drowns anything that needs sharp drainage.',
       'Planting work therefore starts with what the site is, not with a plant list. Ground is prepared properly, which on compacted or clay-heavy soil usually matters more than the plants themselves. Species are chosen to cope with west of Scotland rainfall and wind, and positioned with their eventual size in mind so a border does not need ripping out in five years because everything was planted too close together.',
       'Common work includes putting in new borders where there is currently only lawn or bare ground, planting hedging for shelter, screening or boundaries, replacing shrubs that have died back or outgrown their position, and filling gaps in established beds. Where planting is part of a larger landscaping project it is carried out as the final stage, once levels, edges and surfaces are in.',
-      'Aftercare matters more than most people expect in the first two seasons, particularly for hedging. What a new planting scheme will need — watering, mulching, formative pruning — is explained at the time, and it can be picked up as part of a regular garden maintenance arrangement if you would rather not manage it yourself.',
+      'Aftercare matters more than most people expect in the first two seasons, particularly for hedging. What a new planting scheme will need (watering, mulching, formative pruning) is explained at the time, and it can be picked up as part of a regular garden maintenance arrangement if you would rather not manage it yourself.',
     ],
     benefits: [
       {
@@ -361,7 +361,7 @@ export const services: Service[] = [
     name: 'General outdoor maintenance',
     navLabel: 'Outdoor maintenance',
     shortDescription:
-      'The wider work around a property — clearance, tidying, seasonal jobs and the tasks that never quite get done.',
+      'The wider work around a property: clearance, tidying, seasonal jobs and the tasks that never quite get done.',
     metaTitle: 'Outdoor Maintenance Glasgow Area | Scotia Maintenance',
     metaDescription:
       'General outdoor and grounds maintenance across Glasgow and surrounding towns. Clearance, seasonal tidying and property upkeep. Call 07766 636189.',
@@ -369,10 +369,10 @@ export const services: Service[] = [
     imageAlt:
       'Cleared outdoor space ready for landscaping, with ground cleared and boundary fencing renewed',
     intro:
-      'Not everything outside a property is strictly gardening. Scotia Maintenance takes on general outdoor maintenance across Glasgow and the surrounding areas — the clearance, seasonal work and accumulated jobs that sit outside a normal grass-cutting visit.',
+      'Not everything outside a property is strictly gardening. Scotia Maintenance takes on general outdoor maintenance across Glasgow and the surrounding areas: the clearance, seasonal work and accumulated jobs that sit outside a normal grass-cutting visit.',
     body: [
       'This covers work such as clearing overgrown ground, removing accumulated debris and garden rubbish, seasonal leaf clearance, tidying paths, driveways and hard standing, cutting back growth encroaching on fences, walls, windows and boundaries, and getting outdoor space back into a usable state after a period of neglect. It is often the first job at a property that has been empty, recently bought, or simply left through a busy year.',
-      'It also suits properties where the outdoor space is not really a garden at all — a yard, a paved area, a strip of ground around a building, a communal back court, a bin store area. That kind of space still gets overgrown, still collects leaves and rubbish, and still affects how a property looks, but it rarely fits neatly into a standard gardening service.',
+      'It also suits properties where the outdoor space is not really a garden at all: a yard, a paved area, a strip of ground around a building, a communal back court, a bin store area. That kind of space still gets overgrown, still collects leaves and rubbish, and still affects how a property looks, but it rarely fits neatly into a standard gardening service.',
       'Seasonal work is a large part of it. Autumn leaf fall in the tree-lined suburbs around Bearsden, Milngavie and the west end of Glasgow is heavy and worth staying on top of, because wet leaves left on paths and grass do damage and become a slip hazard. Winter storms bring down growth. Spring brings the first surge of weeds through paths and gravel. These are all straightforward jobs, but they are exactly the ones that get postponed.',
       'Outdoor maintenance is available as a one-off clearance or as an ongoing arrangement, seven days a week between 8am and 4pm. For landlords, letting agents and people managing a property from a distance, it can be arranged and confirmed entirely by phone or email.',
     ],
@@ -391,7 +391,7 @@ export const services: Service[] = [
       },
       {
         title: 'Arranged remotely',
-        text: 'Suited to landlords and owners managing a property from elsewhere — organised by phone or email.',
+        text: 'Suited to landlords and owners managing a property from elsewhere, organised by phone or email.',
       },
     ],
     expect: [

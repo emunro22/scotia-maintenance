@@ -100,7 +100,7 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl">A local service across a wide area</h2>
           <p className="mt-4">
             Scotia Maintenance is listed on Google as a landscaper, and covers a genuinely wide
-            area across Glasgow and the surrounding towns — from Kilmacolm, Langbank and Bridge
+            area across Glasgow and the surrounding towns, from Kilmacolm, Langbank and Bridge
             of Weir in the west, through Renfrewshire and the north bank of the Clyde, to
             Rutherglen and East Kilbride on the eastern side.
           </p>
@@ -115,7 +115,7 @@ export default function AboutPage() {
           <h2 className="mt-12 text-2xl sm:text-3xl">Available seven days a week</h2>
           <p className="mt-4">
             Scotia Maintenance works Monday to Sunday, 8:00am to 4:00pm. Weekend availability is
-            genuinely useful for garden work — it makes it far easier to be at home when a garden
+            genuinely useful for garden work: it makes it far easier to be at home when a garden
             is being looked at and quoted, and it means jobs are not restricted to weekdays when
             most people are out.
           </p>
@@ -129,8 +129,8 @@ export default function AboutPage() {
             actual work.
           </p>
           <p>
-            Work is available as a one-off — a clearance, a tidy-up before a sale or an event, a
-            single landscaping project — or as a regular arrangement through the growing season.
+            Work is available as a one-off (a clearance, a tidy-up before a sale or an event, a
+            single landscaping project) or as a regular arrangement through the growing season.
             There is no obligation to commit to ongoing visits.
           </p>
 

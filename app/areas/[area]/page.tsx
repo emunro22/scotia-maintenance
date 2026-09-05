@@ -68,7 +68,7 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
   const localBusiness = {
     ...localBusinessSchema(),
     '@id': `${url}#business`,
-    name: `${site.name} — ${area.name}`,
+    name: `${site.name} - ${area.name}`,
     description: `Landscaping and garden maintenance in ${area.name}, ${area.region}.`,
     url,
     areaServed: [{ '@type': 'City', name: area.name }],

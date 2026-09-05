@@ -23,7 +23,7 @@ export default function ThankYouPage() {
       <div className="max-w-2xl">
         <p className="eyebrow">Enquiry received</p>
         <h1 className="mt-2 text-[2.2rem] leading-[1.1] sm:text-[3rem]">
-          Thanks — your enquiry has come through
+          Thanks, your enquiry has come through
         </h1>
         <p className="copy mt-5 text-[1.1rem]">
           Scotia Maintenance has your details and will get back to you to arrange a visit and a
@@ -62,8 +62,8 @@ export default function ThankYouPage() {
             and no obligation to go ahead with anything.
           </p>
           <p className="copy mt-4 max-w-prose">
-            If the work is seasonal — a hedge that needs cut at a particular point in the year,
-            or a lawn that is too soft to work on yet — that will be explained rather than
+            If the work is seasonal, such as a hedge that needs cut at a particular point in the
+            year, or a lawn that is too soft to work on yet, that will be explained rather than
             squeezed into the first available slot. Scotia Maintenance works Monday to Sunday
             between 8:00am and 4:00pm, so weekend visits are straightforward to arrange.
           </p>

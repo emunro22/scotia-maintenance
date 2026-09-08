@@ -1,13 +1,13 @@
 export const site = {
   name: 'Scotia Maintenance',
   legalName: 'Scotia Maintenance',
-  url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://scotiamaintenance.co.uk').replace(/\/$/, ''),
+  url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://scotiamaintenance.com').replace(/\/$/, ''),
   description:
     'Landscaping and garden maintenance across Glasgow, Renfrewshire, West Dunbartonshire and East Renfrewshire.',
   phone: '07766 636189',
   phoneHref: 'tel:+447766636189',
   phoneE164: '+447766636189',
-  email: 'scottyboi1981@gmail.com',
+  email: 'enquiries@scotiamaintenance.com',
   category: 'Landscaper',
   openingHours: 'Monday to Sunday, 8:00am – 4:00pm',
   openingHoursShort: '7 days, 8am–4pm',

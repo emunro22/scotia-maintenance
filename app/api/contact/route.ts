@@ -1,5 +1,13 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import {
+  customerConfirmationHtml,
+  customerConfirmationText,
+  ownerNotificationHtml,
+  ownerNotificationText,
+  type Enquiry,
+} from '@/lib/email';
+import { site } from '@/lib/site';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -17,6 +25,20 @@ type Payload = {
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const phonePattern = /^[0-9+()\s-]{9,}$/;
 
+/**
+ * Where enquiries are delivered. Deliberately separate from `site.email`, which
+ * is the address published across the site: this one is never rendered.
+ * Override with CONTACT_TO_EMAIL.
+ */
+const ENQUIRY_RECIPIENT = 'scott.davidson4@icloud.com';
+
+/**
+ * Sender shown to everyone. `site.email` is the published enquiries address and
+ * sits on the domain verified in Resend, so it doubles as the from address.
+ * Override with CONTACT_FROM_EMAIL.
+ */
+const ENQUIRY_SENDER = `${site.name} <${site.email}>`;
+
 /** Very small in-memory throttle. Resets on cold start; a deterrent, not a guarantee. */
 const recent = new Map<string, number[]>();
 const WINDOW_MS = 10 * 60 * 1000;
@@ -28,14 +50,6 @@ function rateLimited(key: string): boolean {
   hits.push(now);
   recent.set(key, hits);
   return hits.length > MAX_PER_WINDOW;
-}
-
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
 }
 
 export async function POST(request: Request) {
@@ -75,75 +89,73 @@ export async function POST(request: Request) {
 
   if (rateLimited(ip)) {
     return NextResponse.json(
-      { error: 'Too many enquiries from this connection. Please call 07766 636189 instead.' },
+      { error: `Too many enquiries from this connection. Please call ${site.phone} instead.` },
       { status: 429 },
     );
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL || 'scottyboi1981@gmail.com';
-  const from = process.env.CONTACT_FROM_EMAIL || 'Scotia Maintenance <onboarding@resend.dev>';
+  const to = process.env.CONTACT_TO_EMAIL || ENQUIRY_RECIPIENT;
+  const from = process.env.CONTACT_FROM_EMAIL || ENQUIRY_SENDER;
 
   if (!apiKey) {
     console.error('RESEND_API_KEY is not set; enquiry was not sent.');
     return NextResponse.json(
-      { error: 'Enquiries are temporarily unavailable. Please call 07766 636189.' },
+      { error: `Enquiries are temporarily unavailable. Please call ${site.phone}.` },
       { status: 503 },
     );
   }
 
   const resend = new Resend(apiKey);
+  const enquiry: Enquiry = { name, phone, email, message, source, receivedAt: new Date() };
 
-  const text = [
-    `New website enquiry: ${source}`,
-    '',
-    `Name:    ${name}`,
-    `Phone:   ${phone}`,
-    `Email:   ${email}`,
-    `Source:  ${source}`,
-    '',
-    'Message:',
-    message || '(no message provided)',
-  ].join('\n');
-
-  const html = `
-    <div style="font-family:Arial,Helvetica,sans-serif;color:#14181d;line-height:1.6">
-      <h2 style="color:#0e2a52;margin:0 0 4px">New website enquiry</h2>
-      <p style="margin:0 0 20px;color:#5b6470">Page: ${escapeHtml(source)}</p>
-      <table cellpadding="0" cellspacing="0" style="border-collapse:collapse">
-        <tr><td style="padding:4px 24px 4px 0;color:#5b6470">Name</td><td><strong>${escapeHtml(name)}</strong></td></tr>
-        <tr><td style="padding:4px 24px 4px 0;color:#5b6470">Phone</td><td><a href="tel:${escapeHtml(phone.replace(/\s/g, ''))}">${escapeHtml(phone)}</a></td></tr>
-        <tr><td style="padding:4px 24px 4px 0;color:#5b6470">Email</td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
-      </table>
-      <h3 style="color:#0e2a52;margin:24px 0 6px">Message</h3>
-      <p style="white-space:pre-wrap;margin:0">${escapeHtml(message || '(no message provided)')}</p>
-    </div>
-  `;
-
+  // The notification to Scotia Maintenance is the one that must land. If it
+  // fails the customer is told, so nobody is left believing an enquiry arrived.
   try {
     const { error } = await resend.emails.send({
       from,
       to: [to],
       replyTo: email,
-      subject: `Website enquiry from ${name} (${source})`,
-      text,
-      html,
+      subject: `New enquiry from ${name} (${source})`,
+      text: ownerNotificationText(enquiry),
+      html: ownerNotificationHtml(enquiry),
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('Resend error sending owner notification:', error);
       return NextResponse.json(
-        { error: 'The enquiry could not be sent. Please call 07766 636189.' },
+        { error: `The enquiry could not be sent. Please call ${site.phone}.` },
         { status: 502 },
       );
     }
-
-    return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error('Contact route failure:', err);
+    console.error('Contact route failure sending owner notification:', err);
     return NextResponse.json(
-      { error: 'The enquiry could not be sent. Please call 07766 636189.' },
+      { error: `The enquiry could not be sent. Please call ${site.phone}.` },
       { status: 500 },
     );
   }
+
+  // The customer acknowledgement is a courtesy: a failure here is logged but
+  // never surfaced, because the enquiry itself has already been delivered.
+  try {
+    const { error } = await resend.emails.send({
+      from,
+      to: [email],
+      // Replies go to the public enquiries address, never the private
+      // delivery address in `to`.
+      replyTo: site.email,
+      subject: `We have got your enquiry, ${name.trim().split(/\s+/)[0]}`,
+      text: customerConfirmationText(enquiry),
+      html: customerConfirmationHtml(enquiry),
+    });
+
+    if (error) {
+      console.error('Resend error sending customer confirmation:', error);
+    }
+  } catch (err) {
+    console.error('Contact route failure sending customer confirmation:', err);
+  }
+
+  return NextResponse.json({ ok: true });
 }

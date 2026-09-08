@@ -7,7 +7,7 @@ export const site = {
   phone: '07766 636189',
   phoneHref: 'tel:+447766636189',
   phoneE164: '+447766636189',
-  email: 'scottyboi1981@gmail.com',
+  email: 'enquiries@scotiamaintenance.com',
   category: 'Landscaper',
   openingHours: 'Monday to Sunday, 8:00am – 4:00pm',
   openingHoursShort: '7 days, 8am–4pm',

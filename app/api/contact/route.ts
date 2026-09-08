@@ -32,8 +32,12 @@ const phonePattern = /^[0-9+()\s-]{9,}$/;
  */
 const ENQUIRY_RECIPIENT = 'scott.davidson4@icloud.com';
 
-/** Must be an address on a domain verified in Resend. Override with CONTACT_FROM_EMAIL. */
-const ENQUIRY_SENDER = `${site.name} <enquiries@scotiamaintenance.com>`;
+/**
+ * Sender shown to everyone. `site.email` is the published enquiries address and
+ * sits on the domain verified in Resend, so it doubles as the from address.
+ * Override with CONTACT_FROM_EMAIL.
+ */
+const ENQUIRY_SENDER = `${site.name} <${site.email}>`;
 
 /** Very small in-memory throttle. Resets on cold start; a deterrent, not a guarantee. */
 const recent = new Map<string, number[]>();
@@ -138,7 +142,9 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from,
       to: [email],
-      replyTo: to,
+      // Replies go to the public enquiries address, never the private
+      // delivery address in `to`.
+      replyTo: site.email,
       subject: `We have got your enquiry, ${name.trim().split(/\s+/)[0]}`,
       text: customerConfirmationText(enquiry),
       html: customerConfirmationHtml(enquiry),

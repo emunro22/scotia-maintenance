@@ -1,9 +1,9 @@
 # robots.txt for Scotia Maintenance
-# https://scotiamaintenance.co.uk
+# https://scotiamaintenance.com
 
 User-agent: *
 Allow: /
 Disallow: /thank-you
 Disallow: /api/
 
-Sitemap: https://scotiamaintenance.co.uk/sitemap.xml
+Sitemap: https://scotiamaintenance.com/sitemap.xml

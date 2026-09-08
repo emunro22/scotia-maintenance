@@ -31,18 +31,18 @@ npm run typecheck   # tsc --noEmit
 | Variable               | Required | Notes                                                        |
 | ---------------------- | -------- | ------------------------------------------------------------ |
 | `RESEND_API_KEY`       | Yes      | From https://resend.com/api-keys. Without it the form returns a clear error and tells the visitor to phone instead. |
-| `CONTACT_TO_EMAIL`     | No       | Defaults to `scottyboi1981@gmail.com`.                        |
-| `CONTACT_FROM_EMAIL`   | No       | Must be an address on a domain verified in Resend. Falls back to `onboarding@resend.dev`, which only delivers to the Resend account owner — set this properly before launch. |
-| `NEXT_PUBLIC_SITE_URL` | Yes      | `https://scotiamaintenance.co.uk`, no trailing slash. Used for canonicals, Open Graph URLs, sitemap and JSON-LD. |
+| `CONTACT_TO_EMAIL`     | No       | Defaults to `scott.davidson4@icloud.com`.                        |
+| `CONTACT_FROM_EMAIL`   | No       | Must be an address on a domain verified in Resend. Defaults to `enquiries@scotiamaintenance.com`. |
+| `NEXT_PUBLIC_SITE_URL` | Yes      | `https://scotiamaintenance.com`, no trailing slash. Used for canonicals, Open Graph URLs, sitemap and JSON-LD. |
 
 ## Deploying to Vercel
 
 1. Push the repository to GitHub and import it in Vercel. The framework is detected
    automatically — no `vercel.json` is needed, so none is included.
 2. Add the environment variables above under Settings → Environment Variables.
-3. Add `scotiamaintenance.co.uk` as a custom domain.
+3. Add `scotiamaintenance.com` as a custom domain.
 4. In Resend, verify the sending domain and set `CONTACT_FROM_EMAIL` to an address on it.
-5. Submit `https://scotiamaintenance.co.uk/sitemap.xml` in Google Search Console.
+5. Submit `https://scotiamaintenance.com/sitemap.xml` in Google Search Console.
 
 ---
 

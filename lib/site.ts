@@ -1,7 +1,7 @@
 export const site = {
   name: 'Scotia Maintenance',
   legalName: 'Scotia Maintenance',
-  url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://scotiamaintenance.co.uk').replace(/\/$/, ''),
+  url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://scotiamaintenance.com').replace(/\/$/, ''),
   description:
     'Landscaping and garden maintenance across Glasgow, Renfrewshire, West Dunbartonshire and East Renfrewshire.',
   phone: '07766 636189',

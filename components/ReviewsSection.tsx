@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import { getGoogleReviews } from '@/lib/reviews';
 import { site } from '@/lib/site';
-import ReviewCard from './ReviewCard';
+import ReviewMarquee from './ReviewMarquee';
 import Reveal from './Reveal';
 import StarRating from './StarRating';
 
 /**
- * How many of Google's reviews to show on the homepage. Google returns at most
- * five, so anything above five simply shows all of them.
+ * How many of Google's reviews to put in the homepage row. Google returns at
+ * most five, so anything above five simply shows all of them.
  */
-const HOME_REVIEW_COUNT = 3;
+const HOME_REVIEW_COUNT = 5;
 
 export default async function ReviewsSection() {
   const { reviews, rating, totalRatings, googleMapsUri, writeReviewUri } =
@@ -49,55 +49,52 @@ export default async function ReviewsSection() {
             </p>
           </div>
         </Reveal>
-
-        {featured.length > 0 ? (
-          <>
-            <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {featured.map((review, i) => (
-                <Reveal as="li" key={review.id} delay={0.05 * i} className="h-full">
-                  <ReviewCard review={review} clamp />
-                </Reveal>
-              ))}
-            </ul>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link href="/reviews" className="btn-outline">
-                Read all reviews
-              </Link>
-              <a
-                href={writeReviewUri}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline"
-              >
-                Leave a review on Google
-              </a>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {[1, 2, 3].map((slot, i) => (
-                <Reveal key={slot} delay={0.05 * i}>
-                  <div className="rounded-card border border-dashed border-stone bg-mist/60 p-6">
-                    <p className="text-[0.95rem] leading-relaxed text-ink/55">
-                      Space reserved for a verified customer review.
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-
-            <p className="mt-6 text-[0.95rem] text-ink/70">
-              Recently had work done?{' '}
-              <a href={site.phoneHref} className="font-semibold text-blue-brand hover:underline">
-                Call {site.phone}
-              </a>{' '}
-              to leave feedback.
-            </p>
-          </>
-        )}
       </div>
+
+      {featured.length > 0 ? (
+        <>
+          {/* Full-bleed so cards run off both edges rather than stopping at the gutter. */}
+          <div className="mt-10">
+            <ReviewMarquee reviews={featured} />
+          </div>
+
+          <div className="container-page mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Link href="/reviews" className="btn-outline">
+              Read all reviews
+            </Link>
+            <a
+              href={writeReviewUri}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              Leave a review on Google
+            </a>
+          </div>
+        </>
+      ) : (
+        <div className="container-page">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {[1, 2, 3].map((slot, i) => (
+              <Reveal key={slot} delay={0.05 * i}>
+                <div className="rounded-card border border-dashed border-stone bg-mist/60 p-6">
+                  <p className="text-[0.95rem] leading-relaxed text-ink/55">
+                    Space reserved for a verified customer review.
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <p className="mt-6 text-[0.95rem] text-ink/70">
+            Recently had work done?{' '}
+            <a href={site.phoneHref} className="font-semibold text-blue-brand hover:underline">
+              Call {site.phone}
+            </a>{' '}
+            to leave feedback.
+          </p>
+        </div>
+      )}
     </section>
   );
 }

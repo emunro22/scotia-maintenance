@@ -95,3 +95,49 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Auto-scrolling reviews row on the homepage. */
+@layer components {
+  .marquee {
+    @apply relative overflow-hidden;
+  }
+
+  .marquee-track {
+    @apply flex w-max gap-4;
+    animation: marquee-drift var(--marquee-duration, 60s) linear infinite;
+    will-change: transform;
+  }
+
+  /* Let people stop the row to actually read a review. */
+  .marquee:hover .marquee-track,
+  .marquee:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-set {
+    @apply flex shrink-0 gap-4;
+  }
+}
+
+@keyframes marquee-drift {
+  from {
+    transform: translateX(0);
+  }
+  /* Half the track is one full set; the extra 0.5rem is half the track gap,
+     which lands the loop exactly on the duplicate set for a seamless join. */
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+/* The blanket reduced-motion rule above collapses animation-duration to 0.001ms,
+   which would make an infinite marquee strobe. Stop it outright instead and let
+   the row be scrolled by hand. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    @apply overflow-x-auto;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+}

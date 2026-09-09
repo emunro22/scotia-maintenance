@@ -54,3 +54,18 @@ export const heroImage = {
   src: '/images/rear-garden-after-7.jpg',
   alt: 'Finished rear garden landscaping in Glasgow with a sandstone patio, raised planting beds and gold gravel',
 };
+
+/**
+ * Finished work used for the cross-fading hero background. Ordered so the first
+ * frame is the strongest single image, since it carries the page's LCP.
+ */
+export const heroSlideshow = [
+  { src: '/images/rear-garden-after-7.jpg', alt: 'Sandstone patio, gold gravel and raised planting beds in a finished rear garden' },
+  { src: '/images/front-garden-after-1.jpg', alt: 'Front garden finished with porcelain paving, white gravel and granite-edged planting' },
+  { src: '/images/rear-garden-after-4.jpg', alt: 'Finished rear garden with sandstone patio, gravel and a painted garden shed' },
+  { src: '/images/rear-garden-after-9.jpg', alt: 'Sandstone steps and glass balustrade built into a sloping garden patio' },
+  { src: '/images/rear-garden-after-1.jpg', alt: 'Rear garden finished with gold gravel, potted planting and a sandstone patio edge' },
+  { src: '/images/front-garden-after-2.jpg', alt: 'Porcelain path and white gravel border leading to a front door' },
+  { src: '/images/rear-garden-after-6.jpg', alt: 'Multi-tone sandstone patio paving in a finished garden' },
+  { src: '/images/front-garden-after-3.jpg', alt: 'Finished driveway and porcelain path with white gravel borders' },
+] as const;

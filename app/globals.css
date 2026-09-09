@@ -20,8 +20,23 @@
 
   h1, h2, h3, h4 {
     @apply font-display text-navy;
-    letter-spacing: -0.021em;
+    font-weight: 700;
     text-wrap: balance;
+  }
+
+  /* Tracking tightens as type gets larger, so big headlines read as one mass
+     while small headings keep their spacing. */
+  h1 {
+    font-weight: 800;
+    letter-spacing: -0.038em;
+  }
+
+  h2 {
+    letter-spacing: -0.032em;
+  }
+
+  h3, h4 {
+    letter-spacing: -0.022em;
   }
 
   p {
@@ -46,7 +61,7 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-card px-6 py-3.5
+    @apply inline-flex items-center justify-center gap-2 rounded-card px-6 py-3.5 tracking-[-0.01em]
            text-[0.95rem] font-semibold transition-colors duration-200;
   }
 
@@ -82,7 +97,8 @@
   }
 
   .eyebrow {
-    @apply text-sm font-semibold text-blue-brand;
+    @apply font-display text-[0.78rem] font-semibold uppercase text-blue-brand;
+    letter-spacing: 0.13em;
   }
 }
 

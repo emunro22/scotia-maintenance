@@ -4,6 +4,7 @@ import Link from 'next/link';
 import BeforeAfter from '@/components/BeforeAfter';
 import CoverageBand from '@/components/CoverageBand';
 import FaqList from '@/components/FaqList';
+import HeroSlideshow from '@/components/HeroSlideshow';
 import JsonLd from '@/components/JsonLd';
 import QuoteSection from '@/components/QuoteSection';
 import ReviewsSection from '@/components/ReviewsSection';
@@ -11,7 +12,7 @@ import Reveal from '@/components/Reveal';
 import { services } from '@/lib/services';
 import { faqSchema } from '@/lib/schema';
 import { site, canonical } from '@/lib/site';
-import { heroImage, transformations, workGallery } from '@/lib/gallery';
+import { heroSlideshow, transformations, workGallery } from '@/lib/gallery';
 
 export const metadata: Metadata = {
   title: 'Landscaping Glasgow & West Scotland | Scotia Maintenance',
@@ -92,14 +93,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-navy-deep">
         <div className="absolute inset-0">
-          <Image
-            src={heroImage.src}
-            alt={heroImage.alt}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+          <HeroSlideshow slides={heroSlideshow} />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/70 to-navy-deep/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/55 to-transparent" />
         </div>

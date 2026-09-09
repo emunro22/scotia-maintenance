@@ -8,6 +8,7 @@ import FaqList from '@/components/FaqList';
 import JsonLd from '@/components/JsonLd';
 import QuoteSection from '@/components/QuoteSection';
 import Reveal from '@/components/Reveal';
+import SpecialismGrid from '@/components/SpecialismGrid';
 import { areas, getArea } from '@/lib/areas';
 import { getService } from '@/lib/services';
 import { breadcrumbSchema, faqSchema, localBusinessSchema } from '@/lib/schema';
@@ -158,6 +159,18 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
               );
             })}
           </ul>
+
+          <h2 className="mt-14 text-2xl sm:text-3xl">
+            Every service we cover in {area.name}
+          </h2>
+          <p className="copy mt-4 max-w-prose">
+            The headings above are the main routes into the work. This is the full list of what
+            Scotia Maintenance takes on in {area.name} and the surrounding streets, all of it
+            handled by our own team rather than passed to a subcontractor.
+          </p>
+          <div className="mt-8">
+            <SpecialismGrid areaName={area.name} />
+          </div>
 
           <h2 className="mt-14 text-2xl sm:text-3xl">Where Scotia Maintenance works in {area.name}</h2>
           <ul className="mt-5 flex flex-wrap gap-2">

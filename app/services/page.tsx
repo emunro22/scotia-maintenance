@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
 import QuoteSection from '@/components/QuoteSection';
 import Reveal from '@/components/Reveal';
+import SpecialismGrid from '@/components/SpecialismGrid';
 import { services } from '@/lib/services';
 import { breadcrumbSchema } from '@/lib/schema';
 import { canonical, site } from '@/lib/site';
@@ -99,6 +100,25 @@ export default function ServicesPage() {
             </Reveal>
           ))}
         </ul>
+      </section>
+
+      <section className="container-page py-14 sm:py-16">
+        <Reveal>
+          <div className="max-w-2xl">
+            <p className="eyebrow">Everything covered</p>
+            <h2 className="mt-3 text-3xl sm:text-[2.4rem]">The full list of what we do</h2>
+            <p className="copy mt-4">
+              The six headings above are where the detail sits. Underneath each one is the
+              specific work it covers, from turfing and drainage through to stonemasonry and
+              retaining walls. If something you need is on this list, it is work Scotia
+              Maintenance takes on directly rather than passes to someone else.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="mt-12">
+          <SpecialismGrid />
+        </div>
       </section>
 
       <QuoteSection

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Archivo, IBM_Plex_Sans } from 'next/font/google';
+import { Outfit, Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,14 +9,16 @@ import { localBusinessSchema, websiteSchema } from '@/lib/schema';
 import { site, canonical } from '@/lib/site';
 import './globals.css';
 
-const display = Archivo({
+// Outfit is geometric and holds up at heavy weights, which carries the bold
+// headline treatment; Inter stays quiet underneath it for long-form copy.
+const display = Outfit({
   subsets: ['latin'],
-  weight: ['600', '700'],
+  weight: ['500', '600', '700', '800'],
   variable: '--font-display',
   display: 'swap',
 });
 
-const body = IBM_Plex_Sans({
+const body = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-body',

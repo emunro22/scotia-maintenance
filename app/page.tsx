@@ -6,6 +6,7 @@ import CoverageBand from '@/components/CoverageBand';
 import FaqList from '@/components/FaqList';
 import JsonLd from '@/components/JsonLd';
 import QuoteSection from '@/components/QuoteSection';
+import ReviewsSection from '@/components/ReviewsSection';
 import Reveal from '@/components/Reveal';
 import { services } from '@/lib/services';
 import { faqSchema } from '@/lib/schema';
@@ -25,6 +26,10 @@ export const metadata: Metadata = {
     images: [{ url: site.ogImage, width: 1200, height: 630, alt: 'Scotia Maintenance landscaping' }],
   },
 };
+
+// Refresh daily so Google reviews stay current.
+// Keep in step with REVIEWS_REVALIDATE_SECONDS in lib/reviews.ts.
+export const revalidate = 86400;
 
 const homeFaqs = [
   {
@@ -316,42 +321,7 @@ export default function HomePage() {
 
       <CoverageBand />
 
-      {/* Reviews: placeholder structure, no fabricated reviews */}
-      <section className="py-16 sm:py-20">
-        <div className="container-page">
-          <Reveal>
-            <div className="max-w-2xl">
-              <p className="eyebrow">Reputation</p>
-              <h2 className="mt-3 text-3xl sm:text-[2.4rem]">Customer reviews</h2>
-              <p className="copy mt-4">
-                Scotia Maintenance is listed on Google as a landscaper covering Glasgow and the
-                surrounding towns. Verified customer reviews will be published here as they are
-                collected, and nothing is shown until it is genuine.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {[1, 2, 3].map((slot, i) => (
-              <Reveal key={slot} delay={0.05 * i}>
-                <div className="rounded-card border border-dashed border-stone bg-mist/60 p-6">
-                  <p className="text-[0.95rem] leading-relaxed text-ink/55">
-                    Space reserved for a verified customer review.
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <p className="mt-6 text-[0.95rem] text-ink/70">
-            Recently had work done?{' '}
-            <a href={site.phoneHref} className="font-semibold text-blue-brand hover:underline">
-              Call {site.phone}
-            </a>{' '}
-            to leave feedback.
-          </p>
-        </div>
-      </section>
+      <ReviewsSection />
 
       {/* FAQ */}
       <section className="pb-16 sm:pb-20">

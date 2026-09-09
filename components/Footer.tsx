@@ -55,6 +55,11 @@ export default function Footer() {
               </li>
             ))}
             <li className="pt-2">
+              <Link href="/reviews" className="hover:text-cyan-light">
+                Customer reviews
+              </Link>
+            </li>
+            <li>
               <Link href="/blog" className="hover:text-cyan-light">
                 Blog
               </Link>

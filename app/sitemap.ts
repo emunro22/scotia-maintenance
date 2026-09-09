@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: canonical('/'), lastModified, changeFrequency: 'monthly', priority: 1 },
     { url: canonical('/services'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
     { url: canonical('/areas'), lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: canonical('/reviews'), lastModified, changeFrequency: 'weekly', priority: 0.7 },
     { url: canonical('/blog'), lastModified, changeFrequency: 'weekly', priority: 0.7 },
     { url: canonical('/about'), lastModified, changeFrequency: 'yearly', priority: 0.6 },
     { url: canonical('/contact'), lastModified, changeFrequency: 'yearly', priority: 0.8 },

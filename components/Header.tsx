@@ -9,6 +9,7 @@ import { site } from '@/lib/site';
 const nav = [
   { href: '/services', label: 'Services' },
   { href: '/areas', label: 'Areas covered' },
+  { href: '/reviews', label: 'Reviews' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
